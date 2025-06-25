@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 
-import Search from './components/search.jsx';
+import Search from './components/Search.jsx';
 import Spinner from './components/Spinner.jsx';
 import Moviecard from './components/Moviecard.jsx';
 
@@ -67,16 +67,16 @@ const App = () => {
       <div className="pattern fixed inset-0 z-0" />
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-10">
         <header className="text-center mb-12">
-          <img src="./hero.png" alt="Hero Banner" className="mx-auto h-32 mb-4" />
+          <img src="./hero.png" alt="Hero Banner" className="mx-auto h-64 mb-4" />
           <h1 className="text-3xl md:text-5xl font-bold mb-4">
-            Find <span className="text-gradient text-blue-400">Movies</span> You'll Enjoy Without the Hassle
+            Find the <span className="text-gradient">Best Movies</span> in The World!
           </h1>
           <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         </header>
 
         {trendingMovies.length > 0 && (
           <section className="mb-12">
-            <h2 className="text-4xl font-semibold mb-4 text-white"> Trending Movies</h2>
+            <h2 className="text-4xl font-semibold mb-4 text-gradient"> Trending Movies</h2>
             <ul className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {trendingMovies.slice(0, 4).map((movie, index) => (
                 <Moviecard
@@ -96,7 +96,7 @@ const App = () => {
         )}
 
         <section>
-          <h2 className="text-4xl font-semibold mb-4">All Movies</h2>
+          <h2 className="text-4xl font-semibold mb-4 text-gradient">All Movies</h2>
 
           {isLoading ? (
             <Spinner />

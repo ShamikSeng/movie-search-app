@@ -17,7 +17,7 @@
 
   --breakpoint-xs: 480px;
 
-  --background-image-hero-pattern: url("/hero-bg.png");
+  --background-image-hero-pattern: url("/hero-bg-2.png");
 }
 
 @layer base {
@@ -50,7 +50,7 @@
 
 @layer components {
   .pattern {
-    background-image: url("/hero-bg.png");
+    background-image: url("/hero-bg-2.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -152,7 +152,7 @@
 }
 
 @utility text-gradient {
-  @apply bg-linear-to-r from-[#D6C7FF] to-[#AB8BFF] bg-clip-text text-transparent;
+  @apply bg-linear-to-r from-[#dbd0d8] to-[#ec4b2f] bg-clip-text text-transparent;
 }
 
 @utility fancy-text {
